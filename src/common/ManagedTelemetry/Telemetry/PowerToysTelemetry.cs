@@ -35,6 +35,10 @@ namespace Microsoft.PowerToys.Telemetry
         /// <summary>
         /// Publishes ETW event when an action is triggered on
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessage(
+    "AssemblyLoadTrimming",
+    "IL2026:RequiresUnreferencedCode",
+    Justification = "We can assume it's safe")]
         public void WriteEvent<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T>(T telemetryEvent)
             where T : EventBase, IEvent
         {

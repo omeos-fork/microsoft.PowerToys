@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Common.Dotnet.CsWinRT.props" />
+  <Import Project="..\..\Common.Dotnet.AotCompatibility.props" />
+	
+	
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetFramework>net9.0-windows10.0.22621</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PublishAot>true</PublishAot>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ManagedTelemetry\Telemetry\ManagedTelemetry.csproj" />
+	</ItemGroup>
+	
+
+</Project>
